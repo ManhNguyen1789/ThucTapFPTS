@@ -1,0 +1,162 @@
+﻿@model Test.Booking
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chỉnh sửa thông tin booking</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Chi tiết thông tin BooKing</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#">Config option 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Config option 2</a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken();
+                    @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" });
+                    <div class="form-horizontal">
+                        <asp:Label runat="server" ID="lbErrordangky" CssClass="text-danger"></asp:Label>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Mã Vé <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                @Html.HiddenFor(model => model.MaVe, new { @class = "form-control", @placeholder = "Mã vé", @autofocus = "autofocus" })
+                                @*@Html.TextBoxFor(model => model.MaVe, new { @class = "form-control", @placeholder = "Mã vé", @autofocus = "autofocus" })*@
+                                <span class="help-block m-b-none">Trường này đã được ẩn đi</span>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Mã Tour <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.MaTour, new { @class = "form-control", @placeholder = "Mã tour", @autofocus = "autofocus" })
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Số người lớn <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-md-2">
+                                        @Html.TextBoxFor(model => model.SLNguoiLon, new { @class = "form-control", @placeholder = "Số người lớn", @autofocus = "autofocus" })
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Số trẻ em <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-md-2">
+                                        @Html.TextBoxFor(model => model.SLTreEm, new { @class = "form-control", @placeholder = "Số trẻ em", @autofocus = "autofocus" })
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Mã lịch trình <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.MaLT, new { @class = "form-control", @placeholder = "Mã Lịch trình", @autofocus = "autofocus" })
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Giá Tiền <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.GiaTien, new { @class = "form-control", @placeholder = "Giá tiền", @autofocus = "autofocus" })
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Mã khách hàng <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.MaKH, new { @class = "form-control", @placeholder = "Mã khách hàng", @autofocus = "autofocus" })
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Mã địa điểm du lịch <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.MaDDDL, new { @class = "form-control", @placeholder = "Mã Địa điểm du lịch", @autofocus = "autofocus" })
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Mã nhân viên <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.MaNV, new { @class = "form-control", @placeholder = "Mã nhân viên", @autofocus = "autofocus" })
+                                <span class="help-block m-b-none">Ví dụ: 15,000,000</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Trạng thái <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.TrangThai, new { @class = "form-control", @placeholder = "Trạng thái", @autofocus = "autofocus" })
+                                <span class="help-block m-b-none">VD: chờ duyệt</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Ngày Book <span class="text-danger">*</span></label>
+                            <div class="col-sm-10">
+                                <div class="form-group row">
+                                    <div class="col-md-2">
+                                        @Html.TextBoxFor(model => model.NgayBook, new { @class = "form-control", @placeholder = "Ngày book", @autofocus = "autofocus" })
+
+                                    </div>
+
+
+                                </div>
+                                <span class="help-block m-b-none">Ví dụ: 12/03/2020 </span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button type="submit" value="Save" class="btn btn-danger">
+                                    Lưu
+                                </button>
+                                <button type="submit" class="btn btn-info">
+                                    <a href="~/Admin/Booking/Index">Hủy</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,331 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <link href="~/Template/styles/tt.css" rel="stylesheet" />
+
+
+<div class="ParentBody">
+    
+    <div class="row HeaderTitleMin720_Menu">
+        <div class="text-left">
+            <div id="divMenuHomeMember" class="left text-left">
+                <ul class="list-inline accinfo-tab-menu" id="ulMenuHomeMember">
+                    <li class="active"><a target="_self" class="button button-capitalize button-dynamic" href="https://accounts.fpts.com.vn">Thông tin</a></li>
+                    <li><a target="_self" class="button button-capitalize button-dynamic" href="/account/RegisterService">Dịch vụ </a></li>
+                    <li><a target="_self" class="button button-capitalize button-dynamic" href="/account/EzTransferReg">Chuyển tiền </a></li>
+                    <li><a target="_self" class="button button-capitalize" href="/account/ServiceInfo">Tiện ích</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <form novalidate="novalidate">
+
+        <div id="tblCusInfo" class="tblContainer no-border">
+            <div class="approvedDB" style="padding-left:0px;">
+                <div class="row">
+                    <div class="fpts-black col-md-3 col-sm-4 col-xs-5 no-padding-respon text-left no-padding-left">Chủ TK </div>
+                    <div class="col-md-9 col-sm-8 col-xs-7 no-padding-respon">
+                        <label class="text_label pull-left datacolor fpts-black ">NGUYỄN VĂN MẠNH</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="approvedDB"  style="padding-left:0px;">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-5 no-padding-respon text-left fpts-black no-padding-left">Giới tính </div>
+                    <div class="col-md-9 col-sm-8 col-xs-7 no-padding-respon text-left fpts-black">
+                        <label class="text_label pull-left datacolor fpts-black ">Nam</label>
+                    </div>
+                </div>
+            </div>
+            <div class="approvedDB"  style="padding-left:0px;">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-5 no-padding-respon text-left fpts-black no-padding-left">Ngày sinh </div>
+                    <div class="col-md-9 col-sm-8 col-xs-7 no-padding-respon text-left fpts-black">
+                        <label class="text_label pull-left datacolor fpts-black ">17/08/1999</label>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+            <div class="approvedDB divInfo" style="padding-left:0px;">
+                
+
+                <div class="row DivNgaycap">
+                    <div class="DivNgayCap-NoiCap">
+                        <div class="col-md-3 col-sm-4 col-xs-5 CMND NgayCap">
+                            <div class="row">
+                                <div class="col-xs-5 col-sm-4 col-md-6 col-xl-6" id="label-cmndNgaycap">
+                                    <label class="fpts-black" style="margin-bottom: unset;"> Số CMND/ĐKKD/HC </label>
+                                    <label class="info-label-left  fpts-black"> Ngày cấp </label>
+                                </div>
+                                <div class="col-xs-7 col-sm-8 col-md-6 col-xl-6" id="input-cmnd">
+                                    <label class="text_label pull-left datacolor cmndEdit  fpts-black" id="lblIndentifyNumber">122285440</label>
+                                    <input class="pull-left form-control input-fixed-size" style="display: none;" value="122285440" id="lblIndentifyNumber_ss" autocomplete="false">
+                                    <span class="datacolor ">
+                                        <label class="text_label datacolor  fpts-black" id="lblDateIssue">03/02/2015</label>
+                                        <input style="margin-left:unset" size="11" type="text" id="txtDateIssue" value="03/02/2015" name="txtDateIssue" data-date-format="dd/mm/yyyy" class="   form-control input-fixed-size" autocomplete="false">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="col-xs-12 col-sm-6 col-md-6 col-xl-6" id="DivNoicap">
+                            <div class="IDInfo2">
+                                <span class="datacolor sp-location" id="spnoicap">
+                                    <label class="lbl-noicap-desk fpts-black" id="lbnoicap">Nơi cấp</label>
+                                    <label class="text_label  datacolor  fpts-black" id="lblPlaceIssue">Bắc Giang</label>
+                                    <input class="pull-left form-control input-fixed-size" style="display: none;" value="Bắc Giang" id="lblPlaceIssue_ss" autocomplete="false">
+                                </span>
+                            </div>
+                        </div>
+                     </div>
+                 
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <i>
+                            <span class="red" style="font-size:18px;">*</span>
+                            Quý khách vui lòng gửi ảnh CMND cũ (Hộ chiếu, sổ hộ khẩu,.. có số cũ) và CMND/Thẻ căn cước mới đến email: fcs@fpts.com.vn để hoàn thiện TĐTT hoặc liên hệ hotline 19006446 để được hỗ trợ
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div class="approvedDB divInfo"  style="padding-left:0px;">
+                <div class="row divAddressEdit" >
+                    <div class="col-md-3 col-sm-4 col-xs-5 no-padding-respon text-left no-padding-left">
+                        <label class="fpts-black" style="margin-bottom: unset;">
+                            Địa chỉ liên hệ
+                        </label>
+
+                        <label style="top:32px;" class="info-label-left fpts-black">
+                            Tỉnh/ Thành phố:
+                        </label>
+                    </div>
+                    <!-- old -->
+                    <!-- new -->
+
+                    <div class="col-md-9 col-sm-8 col-xs-7  no-padding-respon text-left divAddress">
+                        <div class="AddrEdit">
+                            <div class="P1Addr">
+                                <input class="pull-left form-control input-fixed-size" style="display:none;" value="Số 12, Ngách 66/195 Trần Cung, Bắc Từ Liêm" id="lblAddress_ss" autocomplete="false">
+                                <label style="padding-top:unset" class="text_label pull-left datacolor toggleEdit  twoline fpts-black" id="lblAddress">Số 12, Ngách 66/195 Trần Cung, Bắc Từ Liêm</label>
+                                <a></a>
+                                <input class="pull-left form-control" id="txtAddress" name="Address" type="text" value="Số 12, Ngách 66/195 Trần Cung, Bắc Từ Liêm" autocomplete="false">
+                            </div>
+                            <div class="ProvinceAdd twoline">
+                                <input style="display:none;" value="32" id="lblProvince_ss" autocomplete="false">
+                                <label style="margin-bottom:unset;" class="hidden info-label-right datacolor fpts-black">Tỉnh/ Thành phố:</label>
+
+                                <input style="display:none;" value="32" id="lblProvince_new" autocomplete="false">
+                                <span class="text_label datacolor  toggleEdit fpts-black" id="lblProvince" style="padding-left:1px;">Hà Nội</span>
+
+                                <a></a>
+                                <select class="form-control input-fixed-size Hide" id="cboProvince" name="cboProvince">
+                                    <option value="10">An Giang</option>
+                                    <option value="11">Bà Rịa-Vũng Tàu</option>
+                                    <option value="17">Bình Dương</option>
+                                    <option value="19">Bình Phước</option>
+                                    <option value="20">Bình Thuận</option>
+                                    <option value="18">Bình Định</option>
+                                    <option value="12">Bạc Liêu</option>
+                                    <option value="14">Bắc Giang</option>
+                                    <option value="13">Bắc Kạn</option>
+                                    <option value="15">Bắc Ninh</option>
+                                    <option value="16">Bến Tre</option>
+                                    <option value="22">Cao Bằng</option>
+                                    <option value="21">Cà Mau</option>
+                                    <option value="23">Cần Thơ</option>
+                                    <option value="29">Gia Lai</option>
+                                    <option value="38">Hoà Bình</option>
+                                    <option value="30">Hà Giang</option>
+                                    <option value="31">Hà Nam</option>
+                                    <option value="32">Hà Nội</option>
+                                    <option value="33">Hà Tây</option>
+                                    <option value="34">Hà Tĩnh</option>
+                                    <option value="40">Hưng Yên</option>
+                                    <option value="35">Hải Dương</option>
+                                    <option value="36">Hải Phòng</option>
+                                    <option value="37">Hậu Giang</option>
+                                    <option value="39">Hồ Chí Minh</option>
+                                    <option value="41">Khánh Hoà</option>
+                                    <option value="42">Kiên Giang</option>
+                                    <option value="43">Kon Tum</option>
+                                    <option value="44">Lai Châu</option>
+                                    <option value="48">Long An</option>
+                                    <option value="46">Lào Cai</option>
+                                    <option value="47">Lâm Đồng</option>
+                                    <option value="45">Lạng Sơn</option>
+                                    <option value="49">Nam Định</option>
+                                    <option value="50">Nghệ An</option>
+                                    <option value="51">Ninh Bình</option>
+                                    <option value="52">Ninh Thuận</option>
+                                    <option value="53">Phú Thọ</option>
+                                    <option value="54">Phú Yên</option>
+                                    <option value="55">Quảng Bình</option>
+                                    <option value="56">Quảng Nam</option>
+                                    <option value="57">Quảng Ngãi</option>
+                                    <option value="58">Quảng Ninh</option>
+                                    <option value="59">Quảng Trị</option>
+                                    <option value="60">Sóc Trăng</option>
+                                    <option value="61">Sơn La</option>
+                                    <option value="65">Thanh Hoá</option>
+                                    <option value="63">Thái Bình</option>
+                                    <option value="64">Thái Nguyên</option>
+                                    <option value="66">Thừa Thiên-Huế</option>
+                                    <option value="67">Tiền Giang</option>
+                                    <option value="68">Trà Vinh</option>
+                                    <option value="69">Tuyên Quang</option>
+                                    <option value="62">Tây Ninh</option>
+                                    <option value="70">Vĩnh Long</option>
+                                    <option value="71">Vĩnh Phúc</option>
+                                    <option value="72">Yên Bái</option>
+                                    <option value="73">Điện Biên</option>
+                                    <option value="24">Đà Nẵng</option>
+                                    <option value="25">Đắk Lắk</option>
+                                    <option value="26">Đắk Nông</option>
+                                    <option value="27">Đồng Nai</option>
+                                    <option value="28">Đồng Tháp</option>
+                                </select>
+                            </div>
+                            <!-- Check neu la tk nuoc ngoai thi an -->
+
+                            <button style="display:none" class=" button button-small button-plain button-border button-circle  pull-right approveDivAdress reverseChangeDivAddress"><i class="fa fa-2x fa-times"></i></button>
+                        </div>
+
+                        <div id="AddressEditBtn">
+                            <button class="saveAddr button button-small button-plain button-border button-circle" style="display: none;"><i class="fa fa-2x fa-check"></i></button>
+                            <button class="cancelAddr button button-small button-plain button-border button-circle" style="display: none;"><i class="fa fa-2x fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="approvedDB divInfo"  style="padding-left:0px;">
+                <div class="row ">
+                    <div class="col-md-3 col-sm-4 col-xs-5 no-padding-respon text-left fpts-black no-padding-left">Email</div>
+                    <div class="col-md-9 col-sm-8 col-xs-7 no-padding-respon text-left ">
+                        <input class="pull-left form-control input-fixed-size" style="display:none;" value="manhnv1789@gmail.com" id="lblEmail_ss" autocomplete="false">
+                        <label class="toggleEdit  text_label pull-left datacolor fpts-black" id="txtEmail">manhnv1789@gmail.com</label>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="approvedDB divInfo"  style="padding-left:0px;">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-5 no-padding-respon text-left fpts-black no-padding-left">Điện thoại cố định </div>
+                    <div class="col-md-9 col-sm-8 col-xs-7 no-padding-respon text-left">
+                        <input class="pull-left form-control input-fixed-size" style="display:none;" value="" id="lblTel_ss" autocomplete="false">
+                        <label class="text_label pull-left datacolor toggleEdit fpts-black" id="txtTel"></label>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="approvedDB divInfo"  style="padding-left:0px;">
+                <div class="row ">
+                    <div class="col-md-3 col-sm-4 col-xs-5 no-padding-respon  text-left fpts-black no-padding-left">Điện thoại di động </div>
+                    <div class="col-md-9 col-sm-8 col-xs-7 no-padding-respon text-left">
+                        <input class="pull-left form-control input-fixed-size" style="display:none;" value="0376167632" id="lblMobile_ss" autocomplete="false">
+                        <label class="text_label pull-left datacolor toggleEdit fpts-black" id="txtMobile">0376167632</label>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="chucnang" style="text-align: -webkit-center;">
+                <a class="btn btn-primary btnChange fpts-btn-modify" id="btnthongtin" onclick="myFunctionTDTT()">Thay đổi thông tin</a>
+                <div class="row" id="kiemtramk">
+                    <div class="col-xs-12 col-md-4 col-lg-4" id="pass">
+                        <span class="input-group-addon" style="background-color:white"><i class="fa fa-key"></i></span>
+                        <input class="input-mkgd pull-left form-control" id="txtTradingPassword" name="TradingPassword" placeholder="Mật khẩu giao dịch" type="password" autocomplete="false">
+                    </div>
+                    <div class="col-xs-12 col-md-3 col-lg-3" id="chucnang-left">
+                        <input class="btnConfirm fpts-btn-confirm " type="submit" id="btnSubmit" value="Xác nhận" autocomplete="false">
+                    </div>
+                    <div class="col-xs-12 col-md-3 col-lg-3" id="chucnang-right">
+                        <a class="btnHidden fpts-btn-cancel" id="btnhuybo" style="display:none" onclick="myFunctionHuybo()">
+                            Hủy bỏ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+        <script>
+            
+            var z = document.getElementById("lblIndentifyNumber_ss"); 
+            var chucnang = document.getElementById("kiemtramk");
+            var btnSubmit = document.getElementById("btnSubmit");
+            var btnhuybo = document.getElementById("btnhuybo");
+            var btnthongtin = document.getElementById("btnthongtin"); 
+            var lblIndentifyNumber = document.getElementById("lblIndentifyNumber");
+            var lblDateIssue = document.getElementById("lblDateIssue");
+            var txtDateIssue = document.getElementById("txtDateIssue");
+            var lblPlaceIssue = document.getElementById("lblPlaceIssue");
+            var lblPlaceIssue_ss = document.getElementById("lblPlaceIssue_ss");
+            var lblAddress_ss = document.getElementById("lblAddress_ss");
+            var lblAddress = document.getElementById("lblAddress"); 
+            var lblProvince = document.getElementById("lblProvince");
+            var cboProvince = document.getElementById("cboProvince");
+            var txtEmail = document.getElementById("txtEmail");
+            var lblEmail_ss = document.getElementById("lblEmail_ss");
+            var txtMobile = document.getElementById("txtMobile");
+            var lblMobile_ss = document.getElementById("lblMobile_ss");
+            
+            
+            function myFunctionTDTT() {
+                
+                z.style.display = "block";
+                chucnang.style.display = "block";
+                btnSubmit.style.display = "block";
+                btnhuybo.style.display = "block";
+                btnthongtin.style.display = "none";
+                lblIndentifyNumber.style.display = "none";
+                lblDateIssue.style.display = "none";
+                txtDateIssue.style.display = "block";
+                lblPlaceIssue.style.display = "none";
+                lblPlaceIssue_ss.style.display = "block";
+                lblAddress_ss.style.display = "block";
+                lblAddress.style.display = "none";
+                lblProvince.style.display = "none";
+                cboProvince.style.display = "block";
+                txtEmail.style.display = "none";
+                lblEmail_ss.style.display = "block";
+                txtMobile.style.display = "none";
+                lblMobile_ss.style.display = "block";
+            
+            }
+            function myFunctionHuybo() {
+                
+                z.style.display = "none";
+                chucnang.style.display = "none";
+                btnSubmit.style.display = "none";
+                btnhuybo.style.display = "none";
+                btnthongtin.style.display = "block";
+                lblIndentifyNumber.style.display = "block";
+                lblDateIssue.style.display = "block";
+                txtDateIssue.style.display = "none";
+                lblPlaceIssue.style.display = "block";
+                lblPlaceIssue.style = "position: absolute; top: 55%; left: 33%;";
+                lblPlaceIssue_ss.style.display = "none";
+                lblAddress_ss.style.display = "none";
+                lblAddress.style.display = "block";
+                lblProvince.style.display = "block";
+                cboProvince.style.display = "none";
+                txtEmail.style.display = "block";
+                lblEmail_ss.style.display = "none";
+                txtMobile.style.display = "block";
+                lblMobile_ss.style.display = "none";
+                
+            }
+        </script>
+</div>

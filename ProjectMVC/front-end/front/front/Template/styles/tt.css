@@ -1,0 +1,536 @@
+﻿
+a.btn.btn-primary.btnChange.fpts-btn-modify {
+    border-radius: 17px;
+    text-transform: uppercase;
+    margin-top: 18px;
+}
+span.red {
+    color: red;
+}
+
+input#lblIndentifyNumber_ss {
+    width: 200px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+input#lblDateIssue_ss {
+    width: 200px;
+    margin-top: 10px;
+}
+input#lblPlaceIssue_ss {
+    width: 200px;
+    position: absolute;
+    left: 38%;
+    top: 50%;
+}
+input#txtDateIssue {
+    display: contents;
+    width: 200px;
+}
+select#cboProvince {
+    width: 200px;
+    padding-top: 3px;
+}
+input#Email {
+    width: 200px;
+    margin-top: 9px;
+}
+input#Tel {
+    width: 200px;
+    margin-top: 9px;
+}
+.input-group-addon:first-child {
+    border-right: 0;
+    height: 28px;
+}
+input#Mobile {
+    width: 200px;
+    margin-top: 9px;
+}
+
+.form-control{
+    height: 28px;
+}
+.P1Addr {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.ParentBody {
+    flex: 1 0 auto;
+    display: inline-block;
+    /* border: 1px solid; */
+    margin-bottom: -8px;
+    width: 68%;
+}
+label.fpts-black {
+    padding: 14px 0px 0px 0px;
+}
+
+
+.col-md-3.col-sm-4.col-xs-5.no-padding-respon.text-left.no-padding-left {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+.col-md-12.col-sm-12.col-xs-12.text-left.no-padding-left {
+    padding: 5px 0px 12px 0px;
+}
+
+.col-md-9.col-sm-8.col-xs-7.no-padding-respon.text-left.divCMND {
+    width: -1% !important;
+    display: flex;
+    flex-direction: column;
+}
+.col-md-3.col-sm-4.col-xs-5.no-padding-respon.text-left.fpts-black.no-padding-left {
+    padding: 13px 0px 13px 0px;
+}
+#divMenuHomeMember {
+    /* border: 1px solid #ddd; */
+    vertical-align: bottom;
+    display: flex;
+    margin-top: 11px;
+    line-height: 30px;
+    /* background-color: #E2E2E2; */
+    border-bottom: 1px solid;
+    color: #C3C3C3;
+    padding-bottom: 0px;
+}
+#divMenuHomeMember {
+    /* border: 1px solid #ddd; */
+    vertical-align: bottom;
+    display: flex;
+    margin-top: 15px;
+    line-height: 30px;
+    /* background-color: #E2E2E2; */
+    border-bottom: 1px solid;
+    color: #C3C3C3;
+    padding-bottom: 0px;
+}
+
+
+div#pass {
+    display: flex;
+}
+span.input-group-addon {
+    width: 40px !important;
+}
+div#kiemtramk {
+    padding: 17px;
+}
+i.fa.fa-key {
+    padding-top: 2px;
+}
+input#btnSubmit {
+    color: #fff;
+    background-color: #034f8d;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    max-width: 120px;
+    border-radius: 20px;
+    border: 1px solid;
+}
+a#btnhuybo {
+    background-color: #ccc;
+    color: #034f8d;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+a#btnthongtin {
+    width: 177px;
+}
+.chucnang {
+    padding: 0px 0px 35px 0px;
+}
+div#kiemtramk {
+    padding: 17px 17px 17px 145px;
+}
+input#txtTradingPassword {
+    border-radius: 0px 4px 4px 0px;
+}
+.col-md-4.col-lg-4.input-group.row-hidden.ipt-trading-password {
+    float: left;
+}
+#kiemtramk {
+    display: none;
+}
+input#btnSubmit {
+    display: none;
+}
+span.input-group-addon {
+    width: 10px;
+}
+.col-md-3.col-sm-4.col-xs-5.CMND.NgayCap {
+    width: 50%;
+    text-align: start;
+    padding-left: 0px;
+}
+div#input-cmnd {
+    display: flex;
+    flex-direction: column;
+    padding-left: 23px;
+}
+label#lblDateIssue {
+    padding: 0px;
+}
+span.datacolor.sp-location {
+    padding: 0px 0px 0px 0px;
+}
+.IDInfo2 {
+    padding: 10px 10px 10px 72px;
+    margin-top: 20px;
+    text-align: start;
+}
+input#lblEmail_ss {
+    width: 200px !important;
+    margin-top: 10px !important;
+}
+input#lblMobile_ss {
+    width: 200px !important;
+    margin-top: 10px !important;
+}
+.col-md-3.col-sm-4.col-xs-5.CMND.NgayCap .row {
+    border-bottom: none;
+}
+.col-md-12.col-sm-12.col-xs-12 {
+    text-align: start;
+    padding-left: 0px;
+}
+div#label-cmndNgaycap {
+    padding-left: 0px;
+}
+label#lblPlaceIssue {
+    padding: 0px !important;
+    color: #034E95;
+    margin-left:31px;
+}
+@media only screen and (max-width:599px) {
+
+    #divMenuHomeMember {
+        /* border: 1px solid #ddd; */
+        vertical-align: bottom;
+        display: flex;
+        margin-top: 13px;
+        line-height: 30px;
+        /* background-color: #E2E2E2; */
+        border-bottom: 1px solid;
+        color: #C3C3C3;
+        padding-bottom: 4px;
+        padding-top: 11px;
+    }
+    .ParentBody {
+        flex: 1 0 auto;
+        display: inline-block;
+        /* border: 1px solid; */
+        margin-bottom: -8px;
+        width: 100% !important;
+    }
+    .chucnang {
+        padding: 0px 0px 35px 0px;
+    }
+    div#kiemtramk {
+        padding: 0px 0px 0px 0px !important;
+    }
+    div#pass {
+        display: flex;
+        padding: 20px 10px 20px 10px;
+    }
+    div#chucnang-left {
+        width: 39%;
+        float: left;
+        margin-left: 16px;
+    }
+    div#chucnang-right {
+        width: 39%;
+        float: right;
+        margin-right: 16px;
+    }
+    span.datacolor.sp-location {
+        padding: 0px 0px 0px 0px;
+        clear: both;
+    }
+    .col-md-12.col-sm-12.col-xs-12.text-left.no-padding-left {
+        padding: 26px 0px 12px 0px;
+    }
+    .col-md-3.col-sm-4.col-xs-5.CMND.NgayCap {
+        width: 100%;
+        text-align: start;
+        padding-left: 0px;
+    }
+    div#label-cmndNgaycap {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 44% !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    div#input-cmnd {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        width: 50%;
+    }
+    .IDInfo2 {
+        padding: 0px 0px 0px 0px !important;
+        margin-top: 0px !important;
+        text-align: start;
+    }
+    div#DivNoicap {
+        padding-left: 0px;
+    }
+    label#lblPlaceIssue {
+        padding: 0px !important;
+        color: #034E95;
+        margin-left: 0px;
+        position: absolute !important;
+        left: 43% !important;
+        top: 33% !important;
+    }
+    input#lblPlaceIssue_ss {
+        width: 200px !important;
+        position: absolute !important;
+        left: 42% !important;
+        top: 15% !important;
+    }
+}
+@media only screen and (width: 600px){
+    .IDInfo2 {
+        padding: 10px 10px 10px 0px !important;
+        margin-top: 20px !important;
+        text-align: start !important;
+    }
+    .col-md-3.col-sm-4.col-xs-5.CMND.NgayCap {
+        width: 57% !important;
+    }
+    div#DivNoicap {
+        width: 43% !important;
+    }
+    div#input-cmnd {
+        padding-right: 0px !important;
+        text-align: end !important;
+        width: 56% !important;
+    }
+    .approvedDB label.text_label.pull-left.datacolor.fpts-black {
+        text-align: end !important;
+    }
+    label#lbnoicap {
+        padding-left: 29px !important;
+    }
+    div#label-cmndNgaycap {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 44%;
+    }
+    input#lblPlaceIssue_ss {
+        width: 135px;
+        position: absolute;
+        left: 43%;
+        top: 50%;
+    }
+    input#txtDateIssue {
+        display: contents;
+        width: 170px;
+    }
+    input#lblIndentifyNumber_ss {
+        width: 170px;
+        margin-top: 8px;
+        margin-bottom: 6px;
+    }
+
+    .chucnang {
+        padding: 0px 0px 35px 0px;
+    }
+    div#kiemtramk {
+        padding: 0px 0px 0px 0px !important;
+    }
+    div#pass {
+        display: flex;
+        padding: 20px 10px 20px 10px;
+    }
+    div#chucnang-left {
+        width: 39%;
+        float: left;
+        margin-left: 16px;
+    }
+    div#chucnang-right {
+        width: 39%;
+        float: right;
+        margin-right: 16px;
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width:767px) {
+    
+    div#input-cmnd {
+        padding-right: 0px !important;
+        text-align: end !important;
+        width: 44% !important;
+    }
+    .col-md-3.col-sm-4.col-xs-5.CMND.NgayCap {
+        width: 100%;
+        text-align: start;
+        padding-left: 0px;
+    }
+    div#label-cmndNgaycap {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 45% !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    span.datacolor {
+        text-align: start;
+    }
+    label#lbnoicap {
+        padding-top: 7px;
+    }
+    div#input-cmnd {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+    }
+    div#DivNoicap {
+        padding-left: 0px;
+        width: 100%;
+    }
+    .IDInfo2 {
+        padding: 0px 0px 0px 0px !important;
+        margin-top: 0px !important;
+        text-align: start;
+    }
+    span.datacolor.sp-location {
+        padding: 0px 0px 0px 0px;
+        clear: both;
+    }
+    label#lblPlaceIssue {
+        padding: 0px !important;
+        color: #034E95;
+        position: absolute;
+        left: 44% !important;
+        top: 15% !important;
+        margin-left: 0px;
+    }
+    input#lblPlaceIssue_ss {
+        width: 200px;
+        position: absolute;
+        left: 44% !important;
+        top: 12% !important;
+    }
+    .chucnang {
+        padding: 0px 0px 35px 0px;
+    }
+
+    div#kiemtramk {
+        padding: 0px 0px 0px 0px !important;
+    }
+
+    div#pass {
+        display: flex;
+        padding: 20px 10px 20px 10px;
+    }
+
+    div#chucnang-left {
+        width: 39%;
+        float: left;
+        margin-left: 16px;
+    }
+
+    div#chucnang-right {
+        width: 39%;
+        float: right;
+        margin-right: 16px;
+    }
+    .ParentBody {
+        flex: 1 0 auto;
+        display: inline-block;
+        /* border: 1px solid; */
+        margin-bottom: -8px;
+        width: 98% !important;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:989px) {
+    div#input-cmnd {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        width: 50%;
+        position: absolute;
+        left: 71%;
+    }
+    div#label-cmndNgaycap {
+        padding-left: 0px;
+        width: 44%;
+    }
+    .ParentBody {
+        width: 95% !important;
+    }
+    input#txtDateIssue {
+        display: contents;
+        width: 150px !important;
+    }
+    input#lblIndentifyNumber_ss {
+        width: 150px !important;
+        margin-top: 8px;
+        margin-bottom: 6px;
+    }
+    input#lblPlaceIssue_ss {
+        width: 150px;
+        position: absolute;
+        left: 46%;
+        top: 50%;
+    }
+    .chucnang {
+        padding: 0px 0px 35px 0px;
+    }
+
+    div#kiemtramk {
+        padding: 0px 0px 0px 0px !important;
+    }
+
+    div#pass {
+        display: flex;
+        padding: 20px 10px 20px 10px;
+    }
+
+    div#chucnang-left {
+        width: 39%;
+        float: left;
+        margin-left: 16px;
+    }
+
+    div#chucnang-right {
+        width: 39%;
+        float: right;
+        margin-right: 16px;
+    }
+
+    .ParentBody {
+        flex: 1 0 auto;
+        display: inline-block;
+        /* border: 1px solid; */
+        margin-bottom: -8px;
+        width: 98% !important;
+    }
+}
+
+@media only screen and (min-width: 990px) and (max-width:1199px) {
+    input#lblPlaceIssue_ss {
+        width: 150px !important;
+        position: absolute;
+        left: 48% !important;
+        top: 50% !important;
+    }
+}
+
+
+    

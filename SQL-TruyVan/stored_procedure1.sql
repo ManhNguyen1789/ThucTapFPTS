@@ -1,0 +1,424 @@
+﻿-- procedure insert
+--
+--INSERT KHÁCH HÀNG------------
+--CREATE PROCEDURE SP_ThemKhachHang(@MaKH NVARCHAR(50)
+--							, @TenKH NVARCHAR(50)
+--							, @GioiTinh NVARCHAR(50)
+--							, @QuocTich NVARCHAR(50)
+--							, @CMND NVARCHAR(9)
+--							, @DiaCHi NVARCHAR(100)
+--							, @SDT NVARCHAR(13)
+--							, @TaiKhoan NVARCHAR(50)
+--							, @MatKhau NVARCHAR(50)) 
+--AS
+--BEGIN
+--	INSERT INTO KHACHHANG(MaKH,TenKH,GioiTinh,QuocTich,CMND,DiaChi,SDT,TaiKhoan,MatKhau) 
+--	VALUES(@MaKH, @TenKH, @GioiTinh, @QuocTich, @CMND, @DiaCHi, @SDT, @TaiKhoan, @MatKhau)
+--END
+
+--INSERT NHÂN VIÊN------------
+--CREATE PROCEDURE pr_addnhanvien(@MaNV NVARCHAR(50)
+--							, @TenNV NVARCHAR(50)
+--							, @GioiTinh NVARCHAR(50)
+--							, @NghiepVu NVARCHAR(50)
+--							, @NgaySinh date
+--							, @DiaCHi NVARCHAR(100)
+--							, @SDT NVARCHAR(13)
+--							, @TaiKhoan NVARCHAR(50)
+--							, @MatKhau NVARCHAR(50)) 
+--AS
+--BEGIN
+--	INSERT INTO NhanVien(MaNV,TenNV, NghiepVu, NgaySinh, GioiTinh, DiaCHi, TaiKhoan, SDT, PassWord) 
+--	VALUES(@MaNV, @TenNV, @NghiepVu, @NgaySinh, @GioiTinh, @DiaCHi, @TaiKhoan, @SDT, @MatKhau)
+--END
+
+----THỰC THI INSERT KHÁCH HÀNG-----------
+--GO
+--sp_ThemKhachHang 'KH006',N'Nguyễn Văn Nam','Nam',N'Việt Nam','38923',N'Bắc Giang','37843','khnam','0ee4c76f897ecaea3946d1b103fc7baf'
+-------
+--INSERT BOOKING------------------
+--alter PROCEDURE pr_ThemBooking(@MaTour NVARCHAR(50)
+--							, @SLNguoiLon int
+--							, @SLTreEm int
+--							, @MaLT NVARCHAR(50)
+--							, @MaKH NVARCHAR(50)
+--							, @MaDDDL NVARCHAR(50)
+--							, @MaNV NVARCHAR(50)
+--							, @TrangThai NVARCHAR(50)
+--							, @GiaTien bigint
+--							,@NgayBook date) 
+--AS
+--BEGIN
+--	INSERT INTO BOOKING(MaTour,SLNguoiLon,SLTreEm,MaLT,MaKH,MaDDDL,MaNV,TrangThai,GiaTien,NgayBook) 
+--	VALUES(@MaTour, @SLNguoiLon, @SLTreEm, @MaLT, @MaKH, @MaDDDL,@MaNV, @TrangThai,@GiaTien,@NgayBook)
+--END
+
+--INSERT TOUR------------------
+--Create PROCEDURE pr_themtour(@MaTour NVARCHAR(50)
+--							, @TenTour  NVARCHAR(50)
+--							, @MaLoaiTour nvarchar(50)
+--							, @GiaTien int
+--							, @Minuser int
+--							, @Maxuser int
+--							, @MoTa nvarchar(MAX)) 
+--AS
+--BEGIN
+--	INSERT INTO Tour(MaTour,TenTour,MaLoaiTour,GiaTien,Minuser,Maxuser,MoTa) 
+--	VALUES(@MaTour, @TenTour, @MaLoaiTour, @GiaTien, @Minuser, @Maxuser,@MoTa)
+--END
+----THỰC THI INSERT BOOKING-----------
+--insert into BOOKING 
+--	values ('V004','T002', 9, 6,'LTR003','KH003','DDDL003','NV013',N'Chờ duyệt',60000000)
+--GO
+
+--INSERT LỊCH TRÌNH-----------------------
+--CREATE PROCEDURE SP_ThemLichTrinh(@MaLT NVARCHAR(50)
+--							, @NgayBD datetime
+--							, @NgayKT datetime
+--							, @ChiPhi bigint
+--							, @MaTour NVARCHAR(50)
+--							, @MaPT NVARCHAR(50)) 
+--AS
+--BEGIN
+--	INSERT INTO LICHTRINH(MaLT,NgayBD,NgayKT,ChiPhi,MaTour,MaPT) 
+--	VALUES(@MaLT, @NgayBD, @NgayKT, @ChiPhi, @MaTour, @MaPT)
+--END
+
+----THỰC THI INSERT LỊCH TRÌNH-----------
+--insert into LICHTRINH 
+--	values ('LTR004','03-09-2021','03-19-2021',7000000,'T001','PT001')
+--GO
+
+
+
+--- UPDATE---------------
+
+--UPDATE TOUR-----------
+--CREATE PROCEDURE SP_updatetour(@MaTour NVARCHAR(50)
+----							, @TenTour  NVARCHAR(50)
+----							, @MaLoaiTour nvarchar(50)
+----							, @GiaTien int
+----							, @Minuser int
+----							, @Maxuser int
+----							, @MoTa nvarchar(MAX)) 
+--AS
+--BEGIN
+--	UPDATE Tour SET TenKH=@TenKH
+--					,GioiTinh=@GioiTinh
+--					,QuocTich=@QuocTich
+--					,CMND=@CMND
+--					,DiaChi=@DiaCHi
+--					,SDT=@SDT
+--					,TaiKhoan=@TaiKhoan
+--					,MatKhau=@MatKhau
+--	WHERE  = @MaKH
+--END
+--UPDATE KHÁCH HÀNG-----------
+--CREATE PROCEDURE SP_UpdateKhachHang(@MaKH NVARCHAR(50)
+--							, @TenKH NVARCHAR(50)
+--							, @GioiTinh NVARCHAR(50)
+--							, @QuocTich NVARCHAR(50)
+--							, @CMND NVARCHAR(9)
+--							, @DiaCHi NVARCHAR(100)
+--							, @SDT NVARCHAR(13)
+--							, @TaiKhoan NVARCHAR(50)
+--							, @MatKhau NVARCHAR(50)) 
+--AS
+--BEGIN
+--	UPDATE KHACHHANG SET TenKH=@TenKH
+--						,GioiTinh=@GioiTinh
+--						,QuocTich=@QuocTich
+--						,CMND=@CMND
+--						,DiaChi=@DiaCHi
+--						,SDT=@SDT
+--						,TaiKhoan=@TaiKhoan
+--						,MatKhau=@MatKhau
+--	WHERE MaKH = @MaKH
+--END	
+
+--UPDATE NHÂN VIÊN-----------
+--CREATE PROCEDURE pr_editnhanvien(@MaNV NVARCHAR(50)
+--								, @TenNV NVARCHAR(50)
+--								, @GioiTinh NVARCHAR(50)
+--								, @NghiepVu NVARCHAR(50)
+--								, @NgaySinh date
+--								, @DiaCHi NVARCHAR(100)
+--								, @SDT NVARCHAR(13)
+--								, @TaiKhoan NVARCHAR(50)
+--								, @MatKhau NVARCHAR(50)) 
+--AS
+--BEGIN
+--	UPDATE NhanVien SET TenNV = @TenNV
+--						,GioiTinh=@GioiTinh
+--						,NghiepVu=@NghiepVu
+--						,NgaySinh=@NgaySinh
+--						,DiaChi=@DiaCHi
+--						,TaiKhoan=@TaiKhoan
+--						,SDT=@SDT
+--						,PassWord=@MatKhau
+--	WHERE MaNV = @MaNV
+--END	
+--UPDATE Mật KHẩu Nhân Viên-----------
+--CREATE PROCEDURE pr_chagepassNV(@MaNV NVARCHAR(50)
+--								, @MatKhau NVARCHAR(50)) 
+--AS
+--BEGIN
+--	UPDATE NhanVien SET PassWord = @MatKhau
+--	WHERE MaNV = @MaNV
+--END	
+
+-- THƯC THI UPDATE KHÁCH HÀNG-----------
+--BEGIN
+--	UPDATE KHACHHANG SET TenKH=N'Nguyễn Văn Nam'
+--						,GioiTinh='Nam'
+--						,QuocTich=N'Việt Nam'
+--						,CMND=12345
+--						,DiaChi=N'Bắc Giang'
+--						,SDT=3376167666
+--						,TaiKhoan='khnam'
+--						,MatKhau='0ee4c76f897ecaea3946d1b103fc7baf'
+--	WHERE MaKH = 'KH005'
+--END	
+
+
+
+--UPDATE BOOKING----------
+--alter PROCEDURE pr_UpdateBooking(@MaVe NVARCHAR(50)
+--							, @MaTour NVARCHAR(50)
+--							, @SLNguoiLon int
+--							, @SLTreEm int
+--							, @MaLT NVARCHAR(50)
+--							, @MaKH NVARCHAR(50)
+--							, @MaDDDL NVARCHAR(50)
+--							, @MaNV NVARCHAR(50)
+--							, @TrangThai NVARCHAR(50)
+--							, @GiaTien bigint
+--							, @NgayBook date)
+--AS
+--BEGIN
+--	UPDATE BOOKING SET MaTour=@MaTour
+--						,SLNguoiLon=@SLNguoiLon
+--						,SLTreEm=@SLTreEm
+--						,MaLT=@MaLT
+--						,MaKH=@MaKH
+--						,MaDDDL=@MaDDDL
+--						,MaNV=@MaNV
+--						,TrangThai=@TrangThai
+--						,GiaTien=@GiaTien
+--						,NgayBook =@NgayBook
+--	WHERE MaVe = @MaVe
+--END
+
+-- THƯC THI UPDATE BOOKING-----------
+--BEGIN
+--	UPDATE BOOKING SET MaTour='T003'
+--					,SLNguoiLon=5
+--					,SLTreEm=3
+--					,MaLT='LTR003'
+--					,MaKH='KH003'
+--					,MaDDDL='DDDL003'
+--					,MaNV='NV013'
+--					,TrangThai=N'Chờ duyệt'
+--					,GiaTien=61000
+--	WHERE MaVe >= 'V029'
+--END
+
+
+--UPDATE LỊCH TRÌNH-------------
+--CREATE PROCEDURE SP_UpdateLichTrinh(@MaLT NVARCHAR(50)
+--							, @NgayBD datetime
+--							, @NgayKT datetime
+--							, @ChiPhi bigint
+--							, @MaTour NVARCHAR(50)
+--							, @MaPT NVARCHAR(50)) 
+--AS
+--BEGIN
+--	UPDATE LICHTRINH SET NgayBD=@NgayBD
+--						,NgayKT=@NgayKT
+--						,ChiPhi=@ChiPhi
+--						,MaTour=@MaTour
+--						,MaPT=@MaPT
+						
+--	WHERE MaLT = @MaLT
+--END
+
+-- THƯC THI UPDATE LỊCH TRÌNH-----------
+--BEGIN
+--	UPDATE LICHTRINH SET NgayBD='2021-03-15'
+--						,NgayKT='2021-03-25'
+--						,ChiPhi=7000000
+--						,MaTour='T001'
+--						,MaPT='PT001'
+						
+--	WHERE MaLT = 'LTR004'
+--END
+
+-----DELETE
+--DELETE KHÁCH HÀNG-----------
+--CREATE PROCEDURE DeleteKhacHang (@MaKH NVARCHAR(50)
+--							, @TenKH NVARCHAR(50)
+--							, @GioiTinh NVARCHAR(50)
+--							, @QuocTich NVARCHAR(50)
+--							, @CMND NVARCHAR(9)
+--							, @DiaCHi NVARCHAR(100)
+--							, @SDT NVARCHAR(13)
+--							, @TaiKhoan NVARCHAR(50)
+--							, @MatKhau NVARCHAR(50))  
+--AS 
+--BEGIN 
+--	DELETE FROM KHACHHANG
+--	WHERE MaKH = @MaKH 
+--END
+
+--DELETE BOOKING-----------
+--CREATE PROCEDURE pr_deletbooking (@MaVe NVARCHAR(50))  
+--AS 
+--BEGIN 
+--	DELETE FROM Booking
+--	WHERE MaVe = @MaVe 
+--END
+--exec [dbo].[pr_deletbooking] '31'
+--go
+--DELETE TOUR-----------
+--CREATE PROCEDURE pr_deletetour(@MaTour NVARCHAR(50))  
+--AS 
+--BEGIN 
+--	DELETE FROM Tour
+--	WHERE MaTour = @MaTour 
+--END
+--DELETE NHÂN VIÊN-----------
+--alter PROCEDURE pr_deletenhanvien (@MaNV NVARCHAR(50))  
+--AS 
+--BEGIN 
+--	DELETE FROM NHANVIEN
+--	WHERE MaNV = @MaNV 
+--END
+
+--exec [dbo].[pr_deletenhanvien] '15'
+--go
+--select * from Booking
+-----THỰC THI DELETE KHÁCH HÀNG------------------
+--BEGIN 
+--	DELETE FROM KHACHHANG
+--	WHERE MaKH = 'KH0010' 
+--END
+---- XÓA VỚI VÒNG LẶP --------------------------
+--DECLARE @makh INT =10
+--WHILE @makh <=30
+--BEGIN 
+--	DELETE FROM KHACHHANG
+--	WHERE  MaKH = 'KH00' + CONVERT(nvarchar,@makh)
+--	SET @makh = @makh +1;
+--END
+-----DELETE BOOKING-----------------
+--CREATE PROCEDURE DeleteBooking (@MaVe NVARCHAR(50)
+--							, @MaTour NVARCHAR(50)
+--							, @SLNguoiLon int
+--							, @SLTreEm int
+--							, @MaLT NVARCHAR(50)
+--							, @MaKH NVARCHAR(50)
+--							, @MaDDDL NVARCHAR(50)
+--							, @MaNV NVARCHAR(50)
+--							, @TrangThai NVARCHAR(50)
+--							, @GiaTien bigint)  
+--AS 
+--BEGIN 
+--	DELETE FROM BOOKING
+--	WHERE MaVe = @MaVe
+--END
+
+
+-----THỰC THI DELETE BOOKING------------
+--BEGIN 
+--	DELETE FROM BOOKING
+--	WHERE MaVe = 'V004'
+--END
+-----DELETE LỊCH TRÌNH-----------
+--CREATE PROCEDURE DeletelichTrinh (@MaLT NVARCHAR(50)
+--							, @NgayBD datetime
+--							, @NgayKT datetime
+--							, @ChiPhi bigint
+--							, @MaTour NVARCHAR(50)
+--							, @MaPT NVARCHAR(50))  
+--AS 
+--BEGIN 
+--	DELETE FROM LICHTRINH
+--	WHERE MaLT = @MaLT
+--END
+-- XÓA LỊCH TRÌNH VỚI VÒNG LẶP-----------------
+--DECLARE @makh INT =41
+--WHILE @makh <=420
+--BEGIN 
+--	DELETE FROM LICHTRINH
+--	WHERE  MaLT = 'KH00' + CONVERT(nvarchar,@makh)
+--	SET @makh = @makh +1;
+--END
+
+-----THỰC THI DELETE LỊCH TRÌNH----------
+--BEGIN 
+--	DELETE FROM LICHTRINH
+--	WHERE MaLT = 'LTR004'
+--END
+-- THỰC THI XÓA MỘT PROCEDURE-----------
+--DROP PROCEDURE procedure_name;
+
+-- vòng lặp while----------------------
+--DECLARE @makh INT =1
+--WHILE @makh <=10
+--BEGIN 
+--	PRINT @makh;
+--	SET @makh = @makh +1;
+--END
+
+----INSERT KHÁCH HÀNG------------
+-- PROCEDURE sumTongDoanhThu( @NgayBook date
+--							, @GiaTien bigint)
+--AS
+--BEGIN
+--	select sum(GiaTien) as Tong  from Booking where  NgayBook between '"+txttimngaybd.text+"' and '"+txttimngaykt.text+"'
+--END
+
+
+----THỰC THI INSERT KHÁCH HÀNG-----------
+
+-- select sumTongDoanhThu()
+-- GO
+
+------ procedure tính tổng từ ngày đến ngày---------------------------------------
+--ALTER PROCEDURE sumtongdt(@bd NVARCHAR(50)
+--							,@kt NVARCHAR(50))
+							
+--AS
+--BEGIN
+--	SELECT SUM(Booking.GiaTien) as TongDT from Booking where NgayBook between @bd and @kt 
+--END
+
+-- thực thi dbo.sumtongdt------------------------
+--exec dbo.sumtongdt '01/01/2020', '10/10/2021'
+--go
+
+--- procedure những tour được đặt nhiều nhất trong khoảng thời gian-------------
+--create PROCEDURE toptourdatmax(@bd NVARCHAR(50)
+--							,@kt NVARCHAR(50))
+							
+--AS
+--BEGIN
+--	SELECT top 3 Tour.MaTour, tour.TenTour, tour.MaLoaiTour, count(1) as SLD from Booking,Tour where Booking.MaTour = Tour.MaTour and NgayBook between @bd and @kt group by Booking.MaTour, tour.MaTour, tour.TenTour, Tour.MaLoaiTour order by count(1) desc
+--END
+-- thực thi dbo.toptourdatmax------------------------
+--exec dbo.toptourdatmax '01/01/2020', '10/10/2021'
+--go
+
+
+-- procedure tìm booking theo tên nhân viên và time
+--alter PROCEDURE pr_timbooktheotennv(@timkiem NVARCHAR(50))
+							
+--AS
+--BEGIN
+--	select Booking.MaVe, Booking.MaTour, Booking.MaLT, Booking.MaKH, Booking.MaNV, Booking.NgayBook, Booking.GiaTien, NhanVien.TenNV as TenNV, NhanVien.MaNV as MaNV, NhanVien.NghiepVu as NghiepVu, NhanVien.GioiTinh as GioiTinh, NhanVien.DiaChi as DiaChi, NhanVien.SDT as SDT, convert(NVARCHAR(12),NhanVien.NgaySinh, 103) as NgaySinh from Booking, NhanVien where Booking.MaNV = NhanVien.MaNV and NhanVien.TenNV like N'%'+@timkiem+'%';
+--	if(@timkiem = '')
+--		select Booking.MaVe, Booking.MaTour, Booking.MaLT, Booking.MaKH, Booking.MaNV, Booking.NgayBook, Booking.GiaTien, NhanVien.TenNV as TenNV, NhanVien.MaNV as MaNV, NhanVien.NghiepVu as NghiepVu, NhanVien.GioiTinh as GioiTinh, NhanVien.DiaChi as DiaChi, NhanVien.SDT as SDT, convert(NVARCHAR(12),NhanVien.NgaySinh, 103) as NgaySinh from Booking, NhanVien where Booking.MaNV = NhanVien.MaNV
+--END
+-- --thực thi dbo.timbooktheotentime------------------------
+--exec pr_timbooktheotennv N''
+--go

@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TourDlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Booking">
+    <Key>
+      <PropertyRef Name="MaVe" />
+    </Key>
+    <Property Name="MaVe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SLNguoiLon" Type="Int32" />
+    <Property Name="SLTreEm" Type="Int32" />
+    <Property Name="MaLT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaDDDL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="GiaTien" Type="Int32" />
+    <Property Name="NgayBook" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK_Booking_KhachHang" FromRole="Booking" ToRole="KhachHang" />
+    <NavigationProperty Name="LichTrinh" Relationship="Self.FK_Booking_LichTrinh" FromRole="Booking" ToRole="LichTrinh" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK_Booking_NhanVien" FromRole="Booking" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ID_Contact" />
+    </Key>
+    <Property Name="ID_Contact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CTTour">
+    <Key>
+      <PropertyRef Name="MaCTTour" />
+    </Key>
+    <Property Name="MaCTTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaDDDL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaKS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoTaCT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GiaveNL" Type="Int32" />
+    <Property Name="GiaVeTE" Type="Int32" />
+    <Property Name="MaLPT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DiaDiemDL" Relationship="Self.FK_CTTour_DiaDiemDL" FromRole="CTTour" ToRole="DiaDiemDL" />
+    <NavigationProperty Name="LoaiPhuongTien" Relationship="Self.FK_CTTour_LoaiPhuongTien" FromRole="CTTour" ToRole="LoaiPhuongTien" />
+    <NavigationProperty Name="Tour" Relationship="Self.FK_CTTour_Tour" FromRole="CTTour" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="DiaDiemDL">
+    <Key>
+      <PropertyRef Name="MaDDDL" />
+    </Key>
+    <Property Name="MaDDDL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenDDDL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CTTour" Relationship="Self.FK_CTTour_DiaDiemDL" FromRole="DiaDiemDL" ToRole="CTTour" />
+    <NavigationProperty Name="KhachSan" Relationship="Self.FK_KhachSan_DiaDiemDL" FromRole="DiaDiemDL" ToRole="KhachSan" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QuocTich" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CMND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Matkhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Booking" Relationship="Self.FK_Booking_KhachHang" FromRole="KhachHang" ToRole="Booking" />
+  </EntityType>
+  <EntityType Name="KhachSan">
+    <Key>
+      <PropertyRef Name="MaKS" />
+    </Key>
+    <Property Name="MaKS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenKS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaDDDL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DiaDiemDL" Relationship="Self.FK_KhachSan_DiaDiemDL" FromRole="KhachSan" ToRole="DiaDiemDL" />
+  </EntityType>
+  <EntityType Name="LichTrinh">
+    <Key>
+      <PropertyRef Name="MaLT" />
+    </Key>
+    <Property Name="MaLT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayBD" Type="DateTime" Precision="3" />
+    <Property Name="NgayKT" Type="DateTime" Precision="3" />
+    <Property Name="MaTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaPT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Slot" Type="Int32" />
+    <NavigationProperty Name="Booking" Relationship="Self.FK_Booking_LichTrinh" FromRole="LichTrinh" ToRole="Booking" />
+    <NavigationProperty Name="PhuongTien" Relationship="Self.FK_LichTrinh_PhuongTien" FromRole="LichTrinh" ToRole="PhuongTien" />
+    <NavigationProperty Name="Tour" Relationship="Self.FK_LichTrinh_Tour" FromRole="LichTrinh" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="LoaiPhuongTien">
+    <Key>
+      <PropertyRef Name="MaLPT" />
+    </Key>
+    <Property Name="MaLPT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenLPT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CTTour" Relationship="Self.FK_CTTour_LoaiPhuongTien" FromRole="LoaiPhuongTien" ToRole="CTTour" />
+    <NavigationProperty Name="PhuongTien" Relationship="Self.FK_PhuongTien_LoaiPhuongTien" FromRole="LoaiPhuongTien" ToRole="PhuongTien" />
+  </EntityType>
+  <EntityType Name="LoaiTour">
+    <Key>
+      <PropertyRef Name="MaLoaiTour" />
+    </Key>
+    <Property Name="MaLoaiTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenLoaiTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tour" Relationship="Self.FK_Tour_LoaiTour" FromRole="LoaiTour" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Media">
+    <Key>
+      <PropertyRef Name="ID_Media" />
+    </Key>
+    <Property Name="ID_Media" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Main" Type="Boolean" />
+    <Property Name="MaTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tour" Relationship="Self.FK_Media_Tour" FromRole="Media" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NghiepVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="Int32" />
+    <Property Name="PassWord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Booking" Relationship="Self.FK_Booking_NhanVien" FromRole="NhanVien" ToRole="Booking" />
+  </EntityType>
+  <EntityType Name="PhuongTien">
+    <Key>
+      <PropertyRef Name="MaPT" />
+    </Key>
+    <Property Name="MaPT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenPT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoCho" Type="Int32" />
+    <Property Name="MaLPT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LichTrinh" Relationship="Self.FK_LichTrinh_PhuongTien" FromRole="PhuongTien" ToRole="LichTrinh" />
+    <NavigationProperty Name="LoaiPhuongTien" Relationship="Self.FK_PhuongTien_LoaiPhuongTien" FromRole="PhuongTien" ToRole="LoaiPhuongTien" />
+  </EntityType>
+  <EntityType Name="Slide">
+    <Key>
+      <PropertyRef Name="ID_Slide" />
+    </Key>
+    <Property Name="ID_Slide" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenSlide" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="MaTour" />
+    </Key>
+    <Property Name="MaTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaLoaiTour" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTien" Type="Int32" />
+    <Property Name="Minuser" Type="Int32" />
+    <Property Name="Maxuser" Type="Int32" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CTTour" Relationship="Self.FK_CTTour_Tour" FromRole="Tour" ToRole="CTTour" />
+    <NavigationProperty Name="LichTrinh" Relationship="Self.FK_LichTrinh_Tour" FromRole="Tour" ToRole="LichTrinh" />
+    <NavigationProperty Name="LoaiTour" Relationship="Self.FK_Tour_LoaiTour" FromRole="Tour" ToRole="LoaiTour" />
+    <NavigationProperty Name="Media" Relationship="Self.FK_Media_Tour" FromRole="Tour" ToRole="Media" />
+  </EntityType>
+  <Association Name="FK_Booking_KhachHang">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_LichTrinh">
+    <End Role="LichTrinh" Type="Self.LichTrinh" Multiplicity="0..1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LichTrinh">
+        <PropertyRef Name="MaLT" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="MaLT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_NhanVien">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTTour_DiaDiemDL">
+    <End Role="DiaDiemDL" Type="Self.DiaDiemDL" Multiplicity="0..1" />
+    <End Role="CTTour" Type="Self.CTTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaDiemDL">
+        <PropertyRef Name="MaDDDL" />
+      </Principal>
+      <Dependent Role="CTTour">
+        <PropertyRef Name="MaDDDL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTTour_LoaiPhuongTien">
+    <End Role="LoaiPhuongTien" Type="Self.LoaiPhuongTien" Multiplicity="0..1" />
+    <End Role="CTTour" Type="Self.CTTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiPhuongTien">
+        <PropertyRef Name="MaLPT" />
+      </Principal>
+      <Dependent Role="CTTour">
+        <PropertyRef Name="MaLPT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTTour_Tour">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="CTTour" Type="Self.CTTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="MaTour" />
+      </Principal>
+      <Dependent Role="CTTour">
+        <PropertyRef Name="MaTour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KhachSan_DiaDiemDL">
+    <End Role="DiaDiemDL" Type="Self.DiaDiemDL" Multiplicity="0..1" />
+    <End Role="KhachSan" Type="Self.KhachSan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaDiemDL">
+        <PropertyRef Name="MaDDDL" />
+      </Principal>
+      <Dependent Role="KhachSan">
+        <PropertyRef Name="MaDDDL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LichTrinh_PhuongTien">
+    <End Role="PhuongTien" Type="Self.PhuongTien" Multiplicity="0..1" />
+    <End Role="LichTrinh" Type="Self.LichTrinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhuongTien">
+        <PropertyRef Name="MaPT" />
+      </Principal>
+      <Dependent Role="LichTrinh">
+        <PropertyRef Name="MaPT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LichTrinh_Tour">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="LichTrinh" Type="Self.LichTrinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="MaTour" />
+      </Principal>
+      <Dependent Role="LichTrinh">
+        <PropertyRef Name="MaTour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhuongTien_LoaiPhuongTien">
+    <End Role="LoaiPhuongTien" Type="Self.LoaiPhuongTien" Multiplicity="0..1" />
+    <End Role="PhuongTien" Type="Self.PhuongTien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiPhuongTien">
+        <PropertyRef Name="MaLPT" />
+      </Principal>
+      <Dependent Role="PhuongTien">
+        <PropertyRef Name="MaLPT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_LoaiTour">
+    <End Role="LoaiTour" Type="Self.LoaiTour" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiTour">
+        <PropertyRef Name="MaLoaiTour" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="MaLoaiTour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Media_Tour">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="Media" Type="Self.Media" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="MaTour" />
+      </Principal>
+      <Dependent Role="Media">
+        <PropertyRef Name="MaTour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TourDLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Booking" EntityType="Self.Booking" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" />
+    <EntitySet Name="CTTour" EntityType="Self.CTTour" />
+    <EntitySet Name="DiaDiemDL" EntityType="Self.DiaDiemDL" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" />
+    <EntitySet Name="KhachSan" EntityType="Self.KhachSan" />
+    <EntitySet Name="LichTrinh" EntityType="Self.LichTrinh" />
+    <EntitySet Name="LoaiPhuongTien" EntityType="Self.LoaiPhuongTien" />
+    <EntitySet Name="LoaiTour" EntityType="Self.LoaiTour" />
+    <EntitySet Name="Media" EntityType="Self.Media" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" />
+    <EntitySet Name="PhuongTien" EntityType="Self.PhuongTien" />
+    <EntitySet Name="Slide" EntityType="Self.Slide" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Tour" EntityType="Self.Tour" />
+    <AssociationSet Name="FK_Booking_KhachHang" Association="Self.FK_Booking_KhachHang">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_LichTrinh" Association="Self.FK_Booking_LichTrinh">
+      <End Role="LichTrinh" EntitySet="LichTrinh" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_NhanVien" Association="Self.FK_Booking_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="Booking" EntitySet="Booking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTTour_DiaDiemDL" Association="Self.FK_CTTour_DiaDiemDL">
+      <End Role="DiaDiemDL" EntitySet="DiaDiemDL" />
+      <End Role="CTTour" EntitySet="CTTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTTour_LoaiPhuongTien" Association="Self.FK_CTTour_LoaiPhuongTien">
+      <End Role="LoaiPhuongTien" EntitySet="LoaiPhuongTien" />
+      <End Role="CTTour" EntitySet="CTTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTTour_Tour" Association="Self.FK_CTTour_Tour">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="CTTour" EntitySet="CTTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KhachSan_DiaDiemDL" Association="Self.FK_KhachSan_DiaDiemDL">
+      <End Role="DiaDiemDL" EntitySet="DiaDiemDL" />
+      <End Role="KhachSan" EntitySet="KhachSan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LichTrinh_PhuongTien" Association="Self.FK_LichTrinh_PhuongTien">
+      <End Role="PhuongTien" EntitySet="PhuongTien" />
+      <End Role="LichTrinh" EntitySet="LichTrinh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LichTrinh_Tour" Association="Self.FK_LichTrinh_Tour">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="LichTrinh" EntitySet="LichTrinh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhuongTien_LoaiPhuongTien" Association="Self.FK_PhuongTien_LoaiPhuongTien">
+      <End Role="LoaiPhuongTien" EntitySet="LoaiPhuongTien" />
+      <End Role="PhuongTien" EntitySet="PhuongTien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_LoaiTour" Association="Self.FK_Tour_LoaiTour">
+      <End Role="LoaiTour" EntitySet="LoaiTour" />
+      <End Role="Tour" EntitySet="Tour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Media_Tour" Association="Self.FK_Media_Tour">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="Media" EntitySet="Media" />
+    </AssociationSet>
+    <FunctionImport Name="childtk" ReturnType="Collection(TourDlModel.childtk_Result)">
+      <Parameter Name="bd" Mode="In" Type="String" />
+      <Parameter Name="kt" Mode="In" Type="String" />
+      <Parameter Name="timkiem" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TourDlModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TourDlModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="sumtongdt" ReturnType="Collection(Int32)">
+      <Parameter Name="bd" Mode="In" Type="String" />
+      <Parameter Name="kt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="timbooktheotentime" ReturnType="Collection(TourDlModel.timbooktheotentime_Result)">
+      <Parameter Name="bd" Mode="In" Type="String" />
+      <Parameter Name="kt" Mode="In" Type="String" />
+      <Parameter Name="timkiem" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="toptourdatmax" ReturnType="Collection(TourDlModel.toptourdatmax_Result)">
+      <Parameter Name="bd" Mode="In" Type="String" />
+      <Parameter Name="kt" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="childtk_Result">
+    <Property Type="Int32" Name="MaVe" Nullable="false" />
+    <Property Type="String" Name="MaTour" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaKH" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaNV" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgayBook" Nullable="true" />
+    <Property Type="Int32" Name="GiaTien" Nullable="true" />
+    <Property Type="String" Name="TenNV" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaNV1" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NghiepVu" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SDT" Nullable="true" />
+    <Property Type="String" Name="NgaySinh" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="timbooktheotentime_Result">
+    <Property Type="Int32" Name="MaVe" Nullable="false" />
+    <Property Type="String" Name="MaTour" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLT" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaKH" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaNV" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="NgayBook" Nullable="true" />
+    <Property Type="Int32" Name="GiaTien" Nullable="true" />
+    <Property Type="String" Name="TenNV" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaNV1" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NghiepVu" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="GioiTinh" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SDT" Nullable="true" />
+    <Property Type="String" Name="NgaySinh" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="toptourdatmax_Result">
+    <Property Type="String" Name="MaTour" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TenTour" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaLoaiTour" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SLD" Nullable="true" />
+  </ComplexType>
+</Schema>

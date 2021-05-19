@@ -1,0 +1,99 @@
+﻿@model List<Test.Tour>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+    <style>
+        span.item-submit a {
+            color: white;
+        }
+    </style>
+<h2>Tour</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Basic Table</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#">Config option 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Config option 2</a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <button type="submit" class="btn btn-info">
+                    @Html.ActionLink("Thêm Tour mới", "create")
+                </button>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Mã Tour</th>
+                            <th>Tên Tour</th>
+                            <th>Mã loại tour</th>
+                            <th>Giá tiền</th>
+                            <th>Minuser</th>
+                            <th>Maxuser</th>
+                            <th>Mô tả</th>
+                            <th>Chắc năng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.MaTour)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TenTour)</td>
+                                <td>@Html.DisplayFor(modelItem => item.MaLoaiTour)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GiaTien)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Minuser)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Maxuser)</td>
+                                <td>@Html.DisplayFor(modelItem => item.MoTa)</td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs">
+                                        <i class="fa fa-pencil">
+                                            <span class="item-submit">
+                                                @Html.ActionLink("Edit", "Edit", new { id = item.MaTour })
+                                            </span>
+                                        </i>
+                                    </button>
+                                    <button class="btn btn-success btn-xs">
+                                        <i class="fa fa-check">
+                                            <span class="item-submit">
+                                                @Html.ActionLink("Detail", "Details", new { id = item.MaTour })
+                                            </span>
+                                        </i>
+                                    </button>
+                                    <button class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash-o">
+                                            <span class="item-submit">
+                                                @Html.ActionLink("Delete", "Delete", new { id = item.MaTour })
+                                            </span>
+
+                                        </i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

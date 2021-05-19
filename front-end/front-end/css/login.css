@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    line-height: 1.4285;
+    
+}
+/* header */
+.PageHeader{
+    
+    margin: 2px 0px 20px;
+}
+.header{
+    padding-bottom: 2px;
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.center {
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
+.text-center{
+    text-align: center;
+}
+.slogan h3{
+    font-size: 3vw;
+    font-weight: 100 !important;
+}
+
+/* body */
+.PageBody{
+    width: 100%;
+    padding-bottom: 30px;
+    display: flex;
+    min-height: 60vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+}
+.nav-login{
+    margin: auto;
+    height: auto;
+    max-width: 330px;
+    min-width: 300px;
+    padding: 5px 5px 40px;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+}
+.table-bordered{
+    border: 1px solid rgb(221, 221, 221);
+    border-image: none;
+}
+
+.form-group{
+    float: none;
+}
+#frmLogin{
+    width: 100%;
+}
+#frmLogin .form-group input{
+    margin: 10px auto;
+    padding: 6px;
+    width: 80%;
+    background-color: rgb(250, 255, 189);
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 20%);
+
+}
+
+
+/* bottom */
+.intro{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav-list ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-list{
+    border-color: rgb(221, 221, 221);
+    border-width: 1px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+}
+.nav-list li.active {
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.list-inline > li {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    display: inline-block;
+}
+.nav-list li {
+    padding: 10px;
+    color: rgb(153, 153, 153);
+    font-family: HelveticaNeue-Light,Segoe UI Light,Helvetica Neue, Helvetica,Arial,sans-serif;
+    font-size: 20px;
+}
+
+
+
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px){
+    .slogan h3{
+        font-size: 16px;
+        font-weight: normal !important;
+    }
+    .intro span {
+        width: 304px;
+        text-align: justify;
+        padding-right: 10px;
+        padding-left: 10px;
+        display: inline-block;
+    }
+    .intro span{
+        font-size: 13px;
+    }
+    .nav-list li{
+        font-size: 16px;
+    }
+
+    .bot span{
+        font-size: 13px;
+    }
+}
+
+

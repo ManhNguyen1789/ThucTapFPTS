@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mạnh Front-end</title>
+    <link href="~/Template/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Template/styles/layout.css" rel="stylesheet" />
+    <link href="~/Template/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Template/js/jquery-3.2.1.min.js" rel="stylesheet" />
+    <link href="~/Template/js/jquery.min.js" rel="stylesheet" />
+    <link href="~/Template/js/bootstrap.js" rel="stylesheet" />
+    <link href="~/Template/css/fontawesome.min.css" rel="stylesheet" />
+</head>
+<body id="body">
+    
+    <div id="responsiveMenu" style="display: none;">
+        <nav id="menu" class="menu slideout-menu">
+            <header class="menu-header">
+                <img src="~/Template/images/index/thumb/avata.png" class="img-circle" style="width: 30px; float: left; margin-top: 7px; margin-right: 10px; ">
+                <span class="spAcountMobi" title="Tài khoản giao dịch">058C178199</span>
+            </header>
+            <section id="headerTitle">
+                <span class="clientName">NGUYỄN VĂN MẠNH</span>
+            </section>
+
+            <section class="menu-section">
+                <h3 class="menu-section-title"><i class="fa fa-bars"></i>Truy cập dịch vụ</h3>
+                <ul class="menu-section-list">
+                    <li><a href="https://eztrade.fpts.com.vn/">Giao dịch CK cơ sở</a></li>
+                    <li><a href="https://ezfutures.fpts.com.vn/">Giao dịch CK phái sinh</a></li>
+                    <li><a href="https://liveprice.fpts.com.vn/">Bảng giá</a></li>
+                </ul>
+            </section>
+
+            <section class="menu-section">
+                <a href="/contact" target="_blank" id="lnkSupport"><h3 class="menu-section-title"><i class="fa fa-comments"></i>Tư vấn đầu tư</h3></a>
+            </section>
+
+            <section class="menu-section">
+                <h3 class="menu-section-title"><i class="fa fa-user"></i>Tài khoản giao dịch</h3>
+                <ul class="menu-section-list">
+                    <li><a href="https://accounts.fpts.com.vn/home">Thông tin</a></li>
+                    <li><a href="https://accounts.fpts.com.vn/account/ServiceInfo">Dịch vụ </a></li>
+                    <li><a href="https://accounts.fpts.com.vn/account/EzTransferReg">Chuyển tiền</a></li>
+
+                    <li><a href="/account/ServiceInfo"> Tiện ích</a></li>
+
+                    <li><a href="https://accounts.fpts.com.vn/account/changePassword">Thay đổi mật khẩu </a></li>
+                    <li><a href="/OptionsPassword">Cài đặt mật khẩu</a></li>
+                    <li><a href="/rsa">Quản trị Token </a></li>
+                    <li><a href="https://accounts.fpts.com.vn/account/activities"> Hoạt động gần đây</a></li>
+                    <li><a href="https://accounts.fpts.com.vn/account/getHistoryChange">Lịch sử thay đổi thông tin</a></li>
+                    <li><a href="https://accounts.fpts.com.vn/account/changePassword">Thay đổi mật khẩu </a></li>
+                    <li><a href="/OptionsPassword">Cài đặt mật khẩu</a></li>
+                    <li><a href="/rsa">Quản trị Token </a></li>
+                    <li><a href="https://accounts.fpts.com.vn/account/activities"> Hoạt động gần đây</a></li>
+                    <li><a href="https://accounts.fpts.com.vn/account/getHistoryChange">Lịch sử thay đổi thông tin</a></li>
+
+                    <li><a href="http://www.fpts.com.vn/ho-tro-khach-hang/giao-dich-chung-khoan-co-so/cau-hoi-thuong-gap/">Hướng dẫn xóa cache</a></li>
+                    <li><a href="https://accounts.fpts.com.vn/account/Comment">Góp ý</a></li>
+                    <li>
+                        <div style="height:40px">
+                            <a style="display: inline; width: 40px !important; padding-right: 2px !important" href="#">Hỗ trợ ngôn ngữ :</a>
+                            <a style="display: inline; width: 2px; padding-right: 2px; padding-left: 2px; " href="?language=vn">VI</a>
+                            <a style="display: inline-block; width: 2px; padding-right: 2px; padding-left: 2px; " href="#">|</a>
+                            <a style="display: inline; width: 2px; padding-right: 2px; padding-left: 2px; " href="?language=en">EN</a>
+                        </div>
+                    </li>
+                    <li class="logoutMobile"><a href="javascript:parent.document.location='/logout'"><i class="fa fa-sign-out"></i>Thoát</a></li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+    <div id="main" style="transform:none;">
+        <!--header-->
+        <div class="top-header">
+            <div class="container top-header">
+                <div class="top-header-left">
+                    <span>Hotline:</span>
+                    <a href="tel:1900 6446">1900 6446</a>
+                </div>
+                <div class="top-header-right">
+                    <a class="fpts-language"><img src="~/Template/images/index/icon-EN.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mid-header">
+            <div class="container mid-header">
+                <div class="mid-header-left">
+                    <a href="http://www.fpts.com.vn" target="_blank">
+                        <img src="~/Template/images/index/logo_ngang.png" class="fpts-logo">
+                    </a>
+
+                </div>
+                <div class="mid-header-right">
+                    <div class="dropdown">
+
+                        <i class="fa fa-bars" onclick="myFunction(),myFunction2(),myFunction3()"></i>
+                        <img src="~/Template/images/index/thumb/menu.png" class="fpts-icon-menu" data-toggle="dropdown">
+                        <div class="dropdown-menu">
+                            <div class="fptstriangle"></div>
+                            <div class="row">
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <span id="gdckcs"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/')">Giao dịch chứng khoán cơ sở</a></span>
+                                    <span id="gdckps"><a href="javascript:ParentGoUrl('https://ezfutures.fpts.com.vn')"> Giao dịch CK phái sinh</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/stoploss/orderform')">Đặt trước lệnh mua bán</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/oddlot/OrderForm')">Bán CK lô lẻ</a></span>
+                                    <span id="gd"><span id="srvTopEzRightEx"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/rightscustody/OverView')">Thực hiện quyền</a></span></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/rightscustody/CustodyOrderForm')">Lưu ký chứng khoán</a></span>
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/rightscustody/AdvanceOrderForm')">Ứng trước cổ tức</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/margin/Mortgage')">Cầm cố chứng khoán </a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/report/AssetReport2')">Quản lý tài sản</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/rightscustody/DepositoryHistory')">Tra cứu phí lưu ký</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/report/ReportCW')">Tra cứu chứng quyền</a></span>
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4" id="dropmenu-right">
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/transfer')">Chuyển tiền ngân hàng</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/transfer/home/transferds')">Chuyển tiền ký quỹ CKPS</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://liveprice.fpts.com.vn/')"> Bảng giá chứng khoán</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://liveprice.fpts.com.vn/hnxpro')"> Bảng giá HNXPro</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('https://chart.fpts.com.vn/')"> Biểu đồ kỹ thuật</a></span>
+                                    <span id="gd"><a href="javascript:ParentGoUrl('http://ezsearch.fpts.com.vn/Services/')"> Thông tin doanh nghiệp</a></span>
+                                    <span id="tamgiac"></span>
+                                </div>
+                                @*<div class="col-sm-4 col-md-4 col-lg-4">
+                <span id="gdckcs"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/')">Giao dịch chứng khoán cơ sở</a></span>
+                <span id="gdckps"><a href="javascript:ParentGoUrl('https://ezfutures.fpts.com.vn')"> Giao dịch CK phái sinh</a></span>
+                <span id="gddtlmb"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/stoploss/orderform')">Đặt trước lệnh mua bán</a></span>
+                <span id="gdbcklle"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/oddlot/OrderForm')">Bán CK lô lẻ</a></span>
+                <span id="gdthquyen"><span id="srvTopEzRightEx"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/rightscustody/OverView')">Thực hiện quyền</a></span></span>
+                <span id="gdlkck"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/rightscustody/CustodyOrderForm')">Lưu ký chứng khoán</a></span>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <span id="gdutct"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/rightscustody/AdvanceOrderForm')">Ứng trước cổ tức</a></span>
+                <span id="gdccck"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/margin/Mortgage')">Cầm cố chứng khoán </a></span>
+                <span id="gdqlts"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/report/AssetReport2')">Quản lý tài sản</a></span>
+                <span id="gdtcplk"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/rightscustody/DepositoryHistory')">Tra cứu phí lưu ký</a></span>
+                <span id="gdtccq"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/report/ReportCW')">Tra cứu chứng quyền</a></span>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <span id="gdctnh"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/transfer')">Chuyển tiền ngân hàng</a></span>
+                <span id="gdctkqckps"><a href="javascript:ParentGoUrl('https://eztrade.fpts.com.vn/transfer/home/transferds')">Chuyển tiền ký quỹ CKPS</a></span>
+                <span id="gdbgck"><a href="javascript:ParentGoUrl('https://liveprice.fpts.com.vn/')"> Bảng giá chứng khoán</a></span>
+                <span id="gdBgHNXpro"><a href="javascript:ParentGoUrl('https://liveprice.fpts.com.vn/hnxpro')"> Bảng giá HNXPro</a></span>
+                <span id="gdBdkt"><a href="javascript:ParentGoUrl('https://chart.fpts.com.vn/')"> Biểu đồ kỹ thuật</a></span>
+                <span id="gdTtdn"><a href="javascript:ParentGoUrl('http://ezsearch.fpts.com.vn/Services/')"> Thông tin doanh nghiệp</a></span>
+            </div>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown menu-right">
+                        <span class="spAcount" title="Tài khoản giao dịch" data-toggle="dropdown">
+                            058C178199
+                            <img src="~/Template/images/index/thumb/icon-down.png" id="caret">
+                        </span>
+                        <div class="dropdown-menu" style="width:0px; position:absolute; left:-15px;">
+                            @*<a id="loginButton" class="active">
+                            <div id="selectLogindiv" class="gb_login"></div>
+                            <span class="button button-small button-circle imgAno hidden">
+
+                            <img src="~/Template/images/index/thumb/iconPhone.png" class="fpts-icon-menu">
+                            </span>
+                            </a>*@
+                            <div id="loginBox" style="display: block;">
+                                <div id="loginForm" style="position: absolute; top: -1px; z-index: 100; right: -25%;">
+                                    <fieldset id="body">
+                                        <span id="tamgiacAccount"></span>
+                                        <fieldset class="clMyProfile">
+                                            <img src="~/Template/images/index/thumb/avata.png" class="imgAvatar img-circle">
+                                            <div class="divAvtarRight">
+                                                <span class="AccName">NGUYỄN VĂN MẠNH</span>
+                                                <a target="_blank" id="btProfile" class="btn-profile" href="https://accounts.fpts.com.vn">Thông tin chủ tài khoản</a>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="changeInfo">
+                                            <a class="clAHeader" href="javascript:ParentGoUrl('https://accounts.fpts.com.vn/account/changePassword')"><span><i class="fa fa-key"></i>Thay đổi mật khẩu</span></a>
+                                        </fieldset>
+
+                                        <fieldset class="changeInfo">
+                                            <a class="clAHeader" href="javascript:ParentGoUrl('https://accounts.fpts.com.vn/rsa')"><span><i class="fa fa-lock"></i>Quản trị Token</span></a>
+                                        </fieldset>
+
+
+
+                                        <fieldset class="changeInfo">
+                                            <a class="clAHeader" href="javascript:ParentGoUrl('https://accounts.fpts.com.vn/account/activities')"><span><i class="fa fa-history"></i>Hoạt động gần đây </span></a>
+                                        </fieldset>
+
+
+
+                                        <fieldset class="changeInfo">
+
+                                            <a class="clAHeader" href="javascript:ParentGoUrl('http://www.fpts.com.vn/ho-tro-khach-hang/giao-dich-chung-khoan-co-so/cau-hoi-thuong-gap/')"><span><i class="fa fa-question-circle"></i>Hướng dẫn xóa cache </span></a>
+                                        </fieldset>
+
+                                        <fieldset class="changeInfo">
+                                            <a class="clAHeader" href="javascript:ParentGoUrl('https://accounts.fpts.com.vn/account/Comment')"><span><i class="fa fa-pencil-square-o"></i>Góp ý </span></a>
+                                        </fieldset>
+
+                                        <fieldset class="languageSupport">
+                                            <span>
+                                                <i class="fa fa-language"></i> <label>Hỗ trợ ngôn ngữ :</label>
+                                                <a class="Sep1" href="?language=vn">Tiếng Việt</a>
+                                                <a>|</a>
+                                                <a class="Sep1" href="?language=en">English</a>
+                                            </span>
+                                        </fieldset>
+
+                                        <fieldset class="logout">
+                                            <a class="clAHeader" href="javascript:parent.document.location='/logout'"><span><i class="fa fa-sign-out"></i> Thoát</span></a>
+                                        </fieldset>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-mid-top">
+                        <a href="https://ezadvisorselect.fpts.com.vn"><i class="fa fa-comments fa-2x faColor"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-top">
+            <div class="container">
+                <ul class="list-inline" id="ulmunesub">
+                    <li id="divMenuHome" class="active"><a target="_self" href="https://accounts.fpts.com.vn">Thông tin chủ tài khoản</a></li>
+                    <li><a target="_self" href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#" target="_self">Cài đặt mật khẩu</a></li>
+                    <li><a target="_self" href="#">Quản trị Token </a></li>
+                    <li><a target="_self" href="#">Hoạt động gần đây</a></li>
+                    <li><a target="_blank" href="http://www.fpts.com.vn/ho-tro-khach-hang/giao-dich-chung-khoan-co-so/cau-hoi-thuong-gap/">Hỗ trợ</a></li>
+                    <li><a target="_self" href="#">Góp ý</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--content-->
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+
+        </div>
+        <!-- footer-->
+        <div class="ft">
+            <footer>
+                <div class="fpts-caption">
+                    <ul>
+                        <li>
+                            <a href="http://www.fpts.com.vn/FileStore/File/2013/07/31/BAN%20CONG%20BO%20RUI%20RO%20-%20FPTS%2001%208%202013.pdf" target="_blank">CÔNG BỐ RỦI RO</a>
+                        </li>
+                        <li>
+                            <a href="http://www.fpts.com.vn/FileStore2/TermsOfUse/VN/" target="_blank">ĐIỀU KHOẢN SỬ DỤNG</a>
+                        </li>
+                        <li id="after">
+                            <a href="https://accounts.fpts.com.vn/help?s=14">CÂU HỎI THƯỜNG GẶP</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fpts-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="fpts-title">Trụ sở Hà Nội</p>
+                                <div>
+                                    <p class="location">Số 52 Đường Lạc Long Quân, Phường Bưởi, Quận Tây Hồ, TP.Hà Nội</p>
+                                    <p class="phone">1900 6446</p>
+                                    <p class="mail">fptsecurities@fpts.com.vn</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="fpts-title">Chi nhánh Tp.Hồ Chí Minh</p>
+                                <div>
+                                    <p class="location">136-138 Lê Thị Hồng Gấm, Phường Nguyễn Thái Bình, Quận 1, TP.Hồ Chí Minh</p>
+                                    <p class="phone">1900 6446</p>
+                                    <p class="mail">fptsecurities@fpts.com.vn</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="fpts-title">Chi nhánh Đà Nẵng</p>
+                                <div>
+                                    <p class="location">Tầng 3,4 Tòa nhà Tràng Tiền, Số 130 Đống Đa, Phường Thuận Phước, Quận Hải Châu, TP.Đà Nẵng</p>
+                                    <p class="phone">1900 6446</p>
+                                    <p class="mail">fptsecurities@fpts.com.vn</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="fpts-securities">
+                    <div class="container">
+                        <p>© 2018 Công ty cổ phần chứng khoán FPT</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    
+    
+
+    <!--================/FOOTER=========================-->
+    <script>
+        var exports = null;
+        function assert(expr, msg) {
+            if (!expr) throw new Error(msg || 'failed');
+        }
+    </script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("main");
+            if (x.style.transform === "none") {
+                x.style.transform = "translate3d(255px, 0px, 0px)";
+                x.style.transition = "transform 0.5s";
+            }
+            else {
+                x.style.transform = "none";
+            }
+        }
+        function myFunction2() {
+            var y = document.getElementById("responsiveMenu");
+            //var menu = document.getElementById("menu");
+            //menu.style.overflowY = "auto";
+            if (y.style.display === "none") {
+                y.style.display = "block";
+                y.style.transition = "display 10s";
+            }
+            else {
+                y.style.transition = "display 5s";
+                y.style.display = "none";
+            }
+        }
+        function myFunction3() {
+            var z = document.getElementById("body");
+            if (z.style.overflow === "hidden") {
+                z.style.overflow = "scroll";
+            }
+            else {
+                z.style.overflow = "hidden";
+            }
+        }
+        
+    </script>
+
+    @*<script src="/js/Slideout.js"></script>
+        <script src="/js/responsiveMenu.js"></script>
+        <script src="/js/account/EzTransfer.js?50e44925-8357-43b8-864a-988f8f339a10"></script>*@
+
+
+    @*<script>
+            window.onload = function () {
+                document.querySelector('.js-slideout-toggle').addEventListener('click', function () {
+                    slideout.toggle();
+                });
+
+                document.querySelector('.menu').addEventListener('click', function (eve) {
+                    if (eve.target.nodeName === 'A') { slideout.close(); }
+                });
+
+
+            };
+        </script>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

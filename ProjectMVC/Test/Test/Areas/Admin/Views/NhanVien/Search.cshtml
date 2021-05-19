@@ -1,0 +1,53 @@
+﻿@using Test.Areas.Admin.Models;
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    string timkiem = Request.QueryString["timkiem"];
+    List<NhanVien> tknv = new List<NhanVien>();
+}
+
+<h2>Search</h2>
+<h3>Từ khóa tìm kiếm : @timkiem</h3>
+@{
+    if (string.IsNullOrEmpty(timkiem))
+    {
+        <h3>Bạn chưa nhập từ khóa tìm kiếm</h3>
+    }
+    else
+    {
+
+        //tknv = new NhanVienModel().timkiemnv(timkiem);
+        tknv = new NhanVienModel().danhsachtimkiem(timkiem);
+        // foreach để hiển thị dữ liệu ra
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã nhân viên</th>
+                    <th>Tên nhân viên</th>
+                    <th>Nghiệp vụ</th>
+                    <th>Giới tính</th>
+                    <th>Ngày sinh</th>
+                    <th>Địa Chỉ</th>
+                    <th>Tài khoản</th>
+                    <th>Số điện thoại</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in tknv)
+                {
+                <tr>
+                    <td>@Html.DisplayFor(model => item.MaNV)</td>
+                    <td>@Html.DisplayFor(model => item.TenNV)</td>
+                    <td>@Html.DisplayFor(model => item.NghiepVu)</td>
+                    <td>@Html.DisplayFor(model => item.GioiTinh)</td>
+                    <td>@Html.DisplayFor(model => item.DiaChi)</td>
+                    <td>@Html.DisplayFor(model => item.TaiKhoan)</td>
+                    <td>@Html.DisplayFor(model => item.SDT)</td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    }
+}
